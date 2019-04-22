@@ -3,13 +3,14 @@ import re
 import json
 from flask import request, render_template
 from urlshortner import app
-
+from forms import urlform
 urlstore = {}
 
 
 @app.route("/", methods=["GET", "POST"])
+@app.route("/home", methods=["GET", "POST"])
 def urlform():
-
+    form = 
     return render_template("form.html")
 
 
