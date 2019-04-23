@@ -7,3 +7,5 @@ class URLForm(FlaskForm):
     url = StringField("url", validators=[URL()])
     submit = SubmitField("Submit")
 
+
+# Implement Flash Messaging to return TinyURL

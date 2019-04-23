@@ -2,16 +2,17 @@ import secrets
 import re
 import json
 from flask import request, render_template
+from .templates import forms
 from urlshortner import app
-from forms import urlform
+
 urlstore = {}
 
 
 @app.route("/", methods=["GET", "POST"])
 @app.route("/home", methods=["GET", "POST"])
 def urlform():
-    form = 
-    return render_template("form.html")
+    form = forms.URLForm()
+    return render_template("home.html", form=form)
 
 
 @app.route("/postURL", methods=["POST"])
